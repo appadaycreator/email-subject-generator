@@ -1,8 +1,9 @@
 {
   "name": "Email Subject Generator",
   "short_name": "email-subjec",
-  "start_url": "/",
+  "start_url": "/email-subject-generator/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#6366f1"
+  "theme_color": "#6366f1",
+  "scope": "/email-subject-generator/"
 }
