@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>メール件名AI生成ツール｜業界別テンプレートで開封率UP【無料】</title>
+<meta name="description" content="メール件名を自動生成｜業界別テンプレート&開封率スコア付き【完全無料・登録不要】">
+<link rel="canonical" href="https://appadaycreator.com/email-subject-generator/lp/">
+<meta property="og:title" content="メール件名AI生成ツール｜業界別テンプレートで開封率UP">
+<meta property="og:description" content="業界別テンプレートで、開封されるメール件名をAIが提案。完全無料・登録不要。">
+<meta property="og:url" content="https://appadaycreator.com/email-subject-generator/lp/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://appadaycreator.com/email-subject-generator/ogp.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📧</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans JP',sans-serif;color:#1e293b;line-height:1.6;background:#fff}
+a{text-decoration:none}
+
+/* ── HEADER ── */
+.header{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.header-inner{max-width:1100px;margin:0 auto;padding:0 20px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:900;font-size:1rem;color:#1e293b;white-space:nowrap}
+.logo span{font-size:1.4rem}
+.nav{display:flex;gap:24px}
+.nav a{font-size:.875rem;font-weight:500;color:#475569;transition:color .2s}
+.nav a:hover{color:#3b82f6}
+.header-cta{background:#3b82f6;color:#fff;padding:10px 20px;border-radius:8px;font-size:.875rem;font-weight:700;white-space:nowrap;transition:background .2s}
+.header-cta:hover{background:#2563eb}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center top}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,30,80,.82) 45%,rgba(15,30,80,.45) 100%)}
+.hero-content{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(251,191,36,.2);border:1px solid #f59e0b;color:#fbbf24;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:16px}
+.hero h1{font-size:2.4rem;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px}
+.hero h1 em{color:#fbbf24;font-style:normal}
+.hero-sub{font-size:1rem;color:#cbd5e1;margin-bottom:28px;line-height:1.8}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{background:#f59e0b;color:#1e293b;padding:14px 28px;border-radius:10px;font-size:1rem;font-weight:800;transition:all .2s;display:inline-flex;align-items:center;gap:6px}
+.btn-primary:hover{background:#d97706;transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,158,11,.4)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);padding:13px 24px;border-radius:10px;font-size:1rem;font-weight:600;transition:all .2s}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.hero-card{background:rgba(255,255,255,.97);border-radius:16px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.hero-card-title{font-size:.8rem;font-weight:700;color:#94a3b8;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
+.hero-subject-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:#f8fafc;border:1px solid #e2e8f0}
+.hero-subject-item:last-child{margin-bottom:0}
+.hero-subject-text{font-size:.8rem;color:#374151;font-weight:500;flex:1}
+.score-badge{font-size:.72rem;font-weight:700;padding:3px 8px;border-radius:12px;white-space:nowrap;margin-left:8px}
+.score-high{background:#dcfce7;color:#16a34a}
+.score-mid{background:#fef9c3;color:#b45309}
+.hero-score-box{text-align:center;margin-top:16px;padding:12px;background:#eff6ff;border-radius:10px}
+.hero-score-num{font-size:2.5rem;font-weight:900;color:#3b82f6}
+.hero-score-label{font-size:.75rem;color:#64748b;margin-top:2px}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:#1e293b;padding:12px 20px}
+.trust-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;color:#cbd5e1;font-size:.82rem;font-weight:600}
+.trust-item span{color:#f59e0b;font-size:1rem}
+
+/* ── SECTION ── */
+.section{padding:72px 20px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:.78rem;font-weight:700;color:#3b82f6;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;text-align:center}
+.section-title{font-size:1.9rem;font-weight:900;text-align:center;color:#1e293b;margin-bottom:12px}
+.section-sub{font-size:1rem;color:#64748b;text-align:center;max-width:600px;margin:0 auto 48px}
+
+/* ── FEATURES ── */
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.feature-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 24px;transition:all .25s}
+.feature-card:hover{border-color:#3b82f6;box-shadow:0 8px 32px rgba(59,130,246,.12);transform:translateY(-4px)}
+.feature-icon{width:56px;height:56px;background:#eff6ff;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feature-icon img{width:32px;height:32px;object-fit:contain}
+.feature-title{font-size:1.05rem;font-weight:800;color:#1e293b;margin-bottom:8px}
+.feature-desc{font-size:.875rem;color:#64748b;line-height:1.75}
+
+/* ── PROBLEMS ── */
+.problems{background:#eff6ff;padding:72px 20px}
+.problems-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;margin:0 auto}
+.problem-list{display:flex;flex-direction:column;gap:14px}
+.problem-item{display:flex;align-items:flex-start;gap:12px;background:#fff;border-radius:12px;padding:16px 18px;border-left:4px solid #f59e0b;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.problem-icon{font-size:1.4rem;min-width:32px}
+.problem-text{font-size:.9rem;color:#374151;font-weight:500;line-height:1.6}
+.problems-photo{border-radius:20px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,.15)}
+.problems-photo img{width:100%;height:380px;object-fit:cover;display:block}
+
+/* ── SOLUTIONS ── */
+.solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.solution-card{background:#3b82f6;color:#fff;border-radius:16px;padding:28px 22px;text-align:center}
+.solution-card:nth-child(2){background:#1d4ed8}
+.solution-card:nth-child(3){background:#1e40af}
+.solution-icon{width:56px;height:56px;background:rgba(255,255,255,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+.solution-icon img{width:32px;height:32px;object-fit:contain;filter:brightness(0) invert(1)}
+.solution-title{font-size:1.05rem;font-weight:800;margin-bottom:8px}
+.solution-desc{font-size:.84rem;opacity:.9;line-height:1.7}
+
+/* ── STATS ── */
+.stats{background:linear-gradient(135deg,#1d4ed8,#3b82f6);padding:64px 20px}
+.stats-inner{max-width:1100px;margin:0 auto;text-align:center}
+.stats-title{font-size:1.6rem;font-weight:900;color:#fff;margin-bottom:8px}
+.stats-sub{font-size:.95rem;color:#bfdbfe;margin-bottom:48px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-box{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:28px 16px;backdrop-filter:blur(4px)}
+.stat-num{font-size:2.4rem;font-weight:900;color:#fff;line-height:1}
+.stat-unit{font-size:1rem;font-weight:700;color:#fbbf24}
+.stat-label{font-size:.8rem;color:#bfdbfe;margin-top:8px}
+
+/* ── SCENES ── */
+.scenes-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.scene-card{border-radius:14px;overflow:hidden;background:#fff;border:1px solid #e2e8f0;transition:all .25s}
+.scene-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12);transform:translateY(-3px)}
+.scene-photo{height:140px;overflow:hidden}
+.scene-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.scene-card:hover .scene-photo img{transform:scale(1.05)}
+.scene-body{padding:14px 16px}
+.scene-icon-wrap{width:36px;height:36px;background:#eff6ff;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
+.scene-icon-wrap img{width:22px;height:22px;object-fit:contain}
+.scene-name{font-size:.88rem;font-weight:800;color:#1e293b;margin-bottom:4px}
+.scene-desc{font-size:.75rem;color:#64748b;line-height:1.6}
+
+/* ── TEMPLATES ── */
+.templates{background:#f8fafc;padding:72px 20px}
+.template-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.template-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.template-industry{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.template-industry img{width:24px;height:24px;object-fit:contain}
+.template-industry-name{font-size:.8rem;font-weight:700;color:#3b82f6;background:#eff6ff;padding:3px 10px;border-radius:20px}
+.template-subject{font-size:.88rem;color:#1e293b;font-weight:600;margin-bottom:4px}
+.template-score{font-size:.75rem;color:#16a34a;font-weight:700}
+
+/* ── CTA ── */
+.cta-section{background:linear-gradient(135deg,#1e3a5f,#3b82f6);padding:80px 20px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;top:-40px;right:-40px;width:300px;height:300px;background:rgba(255,255,255,.05);border-radius:50%}
+.cta-section::after{content:'';position:absolute;bottom:-60px;left:-30px;width:200px;height:200px;background:rgba(255,255,255,.04);border-radius:50%}
+.cta-stars{font-size:1.5rem;margin-bottom:12px}
+.cta-title{font-size:2rem;font-weight:900;color:#fff;margin-bottom:12px;position:relative;z-index:1}
+.cta-sub{font-size:1rem;color:#bfdbfe;margin-bottom:32px;position:relative;z-index:1}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:#f59e0b;color:#1e293b;padding:16px 36px;border-radius:12px;font-size:1.1rem;font-weight:900;transition:all .2s;position:relative;z-index:1}
+.cta-btn:hover{background:#d97706;transform:translateY(-3px);box-shadow:0 12px 32px rgba(245,158,11,.5)}
+.cta-note{font-size:.82rem;color:#93c5fd;margin-top:16px;position:relative;z-index:1}
+
+/* ── FOOTER ── */
+footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
+.footer-logo{font-size:1.1rem;font-weight:900;color:#fff;margin-bottom:12px}
+.footer-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.footer-links a{font-size:.82rem;color:#94a3b8;transition:color .2s}
+.footer-links a:hover{color:#fff}
+.footer-copy{font-size:.78rem;color:#64748b;margin-top:8px}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .hero-content{grid-template-columns:1fr;gap:32px}
+  .hero-card{display:none}
+  .features-grid,.solutions-grid{grid-template-columns:1fr}
+  .problems-grid{grid-template-columns:1fr}
+  .problems-photo{order:-1}
+  .scenes-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .template-grid{grid-template-columns:1fr}
+  .hero h1{font-size:1.8rem}
+  .nav{display:none}
+}
+@media(max-width:480px){
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .scenes-grid{grid-template-columns:1fr 1fr}
+  .hero{min-height:500px}
+  .trust-inner{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <a href="/email-subject-generator/" class="logo">
+      <span>📧</span>メール件名AI生成ツール
+    </a>
+    <nav class="nav">
+      <a href="#features">特徴</a>
+      <a href="#howto">使い方</a>
+      <a href="#templates">テンプレート</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="/email-subject-generator/" class="header-cta">無料で今すぐ生成</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div>
+      <div class="hero-badge"><span>✨</span> AI搭載・完全無料・登録不要</div>
+      <h1>業界別テンプレートで、<br>開封される<em>メール件名</em>を<br>AIが提案。</h1>
+      <p class="hero-sub">業界・目的を選ぶだけで、開封率の高い件名を<br>複数パターン自動生成。コピーして即使える。</p>
+      <div class="hero-btns">
+        <a href="/email-subject-generator/" class="btn-primary">✉️ 無料で今すぐ生成</a>
+        <a href="#features" class="btn-outline">詳しく見る</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-title">AIが生成したメール件名（例）</div>
+      <div class="hero-subject-item">
+        <span class="hero-subject-text">【限定】本日のみ！EC会員様への特別オファー</span>
+        <span class="score-badge score-high">92点</span>
+      </div>
+      <div class="hero-subject-item">
+        <span class="hero-subject-text">〇〇様、新商品のご案内です（先着50名様）</span>
+        <span class="score-badge score-high">88点</span>
+      </div>
+      <div class="hero-subject-item">
+        <span class="hero-subject-text">お礼とご報告：先日のご注文について</span>
+        <span class="score-badge score-mid">74点</span>
+      </div>
+      <div class="hero-subject-item">
+        <span class="hero-subject-text">今週の学習進捗レポートをお届けします</span>
+        <span class="score-badge score-mid">71点</span>
+      </div>
+      <div class="hero-score-box">
+        <div class="hero-score-num">87</div>
+        <div class="hero-score-label">平均開封率スコア</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span>✅</span> 完全無料</div>
+    <div class="trust-item"><span>✅</span> 登録不要</div>
+    <div class="trust-item"><span>✅</span> 1,200+テンプレート</div>
+    <div class="trust-item"><span>✅</span> 20業界対応</div>
+    <div class="trust-item"><span>✅</span> 開封率スコア付き</div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <div class="section-label">Features</div>
+    <h2 class="section-title">AIが提供する3つの強み</h2>
+    <p class="section-sub">業界・目的を入力するだけで、プロ品質のメール件名が即座に生成されます。</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="../assets/icons/split/02-01.png" alt="AI分析">
+        </div>
+        <div class="feature-title">AI深層分析で件名を最適化</div>
+        <p class="feature-desc">受信者の属性・トーン・メールの意図をAIが分析。業界固有のキーワードを織り込んだ件名を複数パターン生成します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="../assets/icons/split/01-08.png" alt="開封率スコア">
+        </div>
+        <div class="feature-title">開封率予測スコアを表示</div>
+        <p class="feature-desc">生成した件名ごとに0〜100の開封率予測スコアを表示。数字・疑問形・緊急性など、開封率を上げる要素を自動評価します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <img src="../assets/icons/split/02-04.png" alt="A/Bテスト">
+        </div>
+        <div class="feature-title">A/Bテスト比較機能</div>
+        <p class="feature-desc">複数件名のスコアを並べて比較。どの件名が最も効果的かを一目で判断でき、メール配信前の最終チェックに活用できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems">
+  <div class="problems-grid">
+    <div>
+      <div class="section-label" style="text-align:left">Problem</div>
+      <h2 class="section-title" style="text-align:left;margin-bottom:28px">こんなお悩み<br>ありませんか？</h2>
+      <div class="problem-list">
+        <div class="problem-item">
+          <div class="problem-icon">😓</div>
+          <div class="problem-text">件名を考えるのに時間がかかり、メール作成が進まない</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">📉</div>
+          <div class="problem-text">メールの開封率が低くて施策の効果が出ない</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">🤔</div>
+          <div class="problem-text">業界に合った適切な言い回しが分からない</div>
+        </div>
+        <div class="problem-item">
+          <div class="problem-icon">🔄</div>
+          <div class="problem-text">毎回同じような件名になってしまい、飽きられている</div>
+        </div>
+      </div>
+    </div>
+    <div class="problems-photo">
+      <img src="../assets/photos/photo_02.jpg" alt="メール件名に悩むビジネスパーソン" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Solution</div>
+    <h2 class="section-title">AIツールで解決！</h2>
+    <p class="section-sub">業界別テンプレートとAIスコアリングで、件名作成をもっとスマートに。</p>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="solution-icon">
+          <img src="../assets/icons/split/02-05.png" alt="自動生成">
+        </div>
+        <div class="solution-title">業界×目的で自動生成</div>
+        <p class="solution-desc">20業界×15目的のマトリクスから最適な件名をAIが瞬時に生成。ゼロから考える手間ゼロ。</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">
+          <img src="../assets/icons/split/01-06.png" alt="スコア">
+        </div>
+        <div class="solution-title">開封率スコアで即判断</div>
+        <p class="solution-desc">各件名に予測スコアを付与。高スコアの件名を選ぶだけで開封率アップが期待できます。</p>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">
+          <img src="../assets/icons/split/02-06.png" alt="履歴">
+        </div>
+        <div class="solution-title">生成履歴で再利用</div>
+        <p class="solution-desc">過去の生成結果を保存・参照。成功した件名パターンを繰り返し活用できます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <h2 class="stats-title">先進の機能で、件名作成をもっとスマートに</h2>
+    <p class="stats-sub">数字で見るメール件名AI生成ツールの実力</p>
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div><span class="stat-num">1,200</span><span class="stat-unit">+</span></div>
+        <div class="stat-label">業界別テンプレート数</div>
+      </div>
+      <div class="stat-box">
+        <div><span class="stat-num">20</span><span class="stat-unit">業界</span></div>
+        <div class="stat-label">対応業界カテゴリ</div>
+      </div>
+      <div class="stat-box">
+        <div><span class="stat-num">30</span><span class="stat-unit">%</span></div>
+        <div class="stat-label">平均開封率改善効果</div>
+      </div>
+      <div class="stat-box">
+        <div><span class="stat-num">5</span><span class="stat-unit">秒</span></div>
+        <div class="stat-label">件名生成にかかる時間</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCENES -->
+<section class="section" id="scenes">
+  <div class="section-inner">
+    <div class="section-label">Use Cases</div>
+    <h2 class="section-title">さまざまなシーンで活用できます</h2>
+    <p class="section-sub">業界・職種を問わず、あらゆるメール件名作成に対応します。</p>
+    <div class="scenes-grid">
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_07.jpg" alt="EC・販売" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/03-06.png" alt="EC"></div>
+          <div class="scene-name">EC・販売</div>
+          <div class="scene-desc">商品案内・セール告知・フォローアップメール</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_08.jpg" alt="教育・学習" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/03-08.png" alt="教育"></div>
+          <div class="scene-name">教育・学習</div>
+          <div class="scene-desc">講座案内・進捗レポート・修了通知</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_09.jpg" alt="医療・美容" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/04-02.png" alt="医療"></div>
+          <div class="scene-name">医療・美容</div>
+          <div class="scene-desc">予約確認・次回案内・キャンペーン告知</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_10.jpg" alt="不動産" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/03-07.png" alt="不動産"></div>
+          <div class="scene-name">不動産</div>
+          <div class="scene-desc">物件紹介・内見案内・契約フォロー</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_11.jpg" alt="旅行・観光" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/04-03.png" alt="旅行"></div>
+          <div class="scene-name">旅行・観光</div>
+          <div class="scene-desc">予約完了・旅程案内・特別プラン</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_12.jpg" alt="SaaS・IT" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/04-01.png" alt="SaaS"></div>
+          <div class="scene-name">SaaS・IT</div>
+          <div class="scene-desc">トライアル案内・アップデート通知・サポート</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_13.jpg" alt="HR・採用" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/03-02.png" alt="HR"></div>
+          <div class="scene-name">HR・採用</div>
+          <div class="scene-desc">面接案内・合否通知・入社フォロー</div>
+        </div>
+      </div>
+      <div class="scene-card">
+        <div class="scene-photo"><img src="../assets/photos/photo_14.jpg" alt="金融・保険" loading="lazy"></div>
+        <div class="scene-body">
+          <div class="scene-icon-wrap"><img src="../assets/icons/split/01-05.png" alt="金融"></div>
+          <div class="scene-name">金融・保険</div>
+          <div class="scene-desc">提案書送付・更新案内・手続き完了</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEMPLATE LIBRARY -->
+<section class="templates" id="templates">
+  <div class="section-inner">
+    <div class="section-label">Template Library</div>
+    <h2 class="section-title">業界別テンプレートライブラリ</h2>
+    <p class="section-sub">実績のある件名パターンをすぐにカスタマイズして使えます。</p>
+    <div class="template-grid">
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/03-06.png" alt="EC">
+          <span class="template-industry-name">EC・販売</span>
+        </div>
+        <div class="template-subject">【本日限り】〇〇様への特別価格のご案内</div>
+        <div class="template-score">📊 開封率スコア: 91点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/03-08.png" alt="教育">
+          <span class="template-industry-name">教育・学習</span>
+        </div>
+        <div class="template-subject">〇〇様の学習進捗レポート（今月達成率87%）</div>
+        <div class="template-score">📊 開封率スコア: 88点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/04-02.png" alt="医療">
+          <span class="template-industry-name">医療・美容</span>
+        </div>
+        <div class="template-subject">〇〇様、次回ご予約のご確認（△月△日）</div>
+        <div class="template-score">📊 開封率スコア: 85点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/04-01.png" alt="SaaS">
+          <span class="template-industry-name">SaaS・IT</span>
+        </div>
+        <div class="template-subject">無料トライアル残り3日 — 引き続きご利用いただけます</div>
+        <div class="template-score">📊 開封率スコア: 83点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/03-07.png" alt="不動産">
+          <span class="template-industry-name">不動産</span>
+        </div>
+        <div class="template-subject">【新着】〇〇エリアで〇〇様ご希望の物件が見つかりました</div>
+        <div class="template-score">📊 開封率スコア: 82点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/03-02.png" alt="HR">
+          <span class="template-industry-name">HR・採用</span>
+        </div>
+        <div class="template-subject">書類選考結果のご連絡 ─ 株式会社〇〇</div>
+        <div class="template-score">📊 開封率スコア: 79点</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a href="/email-subject-generator/" class="btn-primary" style="display:inline-flex">📧 すべてのテンプレートを見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO -->
+<section class="section" id="howto">
+  <div class="section-inner">
+    <div class="section-label">How to Use</div>
+    <h2 class="section-title">使い方はとても簡単！<br>4ステップで完了</h2>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px">
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+          <img src="../assets/icons/split/03-06.png" alt="業界選択" style="width:32px;height:32px;object-fit:contain">
+        </div>
+        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 1</div>
+        <div style="font-weight:800;color:#1e293b;margin-bottom:6px">業界を選ぶ</div>
+        <div style="font-size:.82rem;color:#64748b;line-height:1.7">20業界から自分のビジネスに近いカテゴリを選択</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+          <img src="../assets/icons/split/01-05.png" alt="目的選択" style="width:32px;height:32px;object-fit:contain">
+        </div>
+        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 2</div>
+        <div style="font-weight:800;color:#1e293b;margin-bottom:6px">目的を選ぶ</div>
+        <div style="font-size:.82rem;color:#64748b;line-height:1.7">商品案内・フォロー・謝罪など15種類の目的から選択</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+          <img src="../assets/icons/split/01-04.png" alt="生成" style="width:32px;height:32px;object-fit:contain">
+        </div>
+        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 3</div>
+        <div style="font-weight:800;color:#1e293b;margin-bottom:6px">AIが件名を生成</div>
+        <div style="font-size:.82rem;color:#64748b;line-height:1.7">5秒以内に複数の件名候補とスコアを自動生成</div>
+      </div>
+      <div style="text-align:center">
+        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+          <img src="../assets/icons/split/03-01.png" alt="活用" style="width:32px;height:32px;object-fit:contain">
+        </div>
+        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 4</div>
+        <div style="font-weight:800;color:#1e293b;margin-bottom:6px">コピーして活用</div>
+        <div style="font-size:.82rem;color:#64748b;line-height:1.7">高スコアの件名をワンクリックでコピー。即使える</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PHOTOS -->
+<section style="background:#f8fafc;padding:48px 20px">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px">
+      <div style="border-radius:12px;overflow:hidden;aspect-ratio:1"><img src="../assets/photos/photo_15.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:12px;overflow:hidden;aspect-ratio:1"><img src="../assets/photos/photo_16.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:12px;overflow:hidden;aspect-ratio:1"><img src="../assets/photos/photo_17.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:12px;overflow:hidden;aspect-ratio:1"><img src="../assets/photos/photo_18.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="border-radius:12px;overflow:hidden;aspect-ratio:1"><img src="../assets/photos/photo_19.jpg" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="section-inner" style="max-width:760px">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">よくある質問</h2>
+    <div style="display:flex;flex-direction:column;gap:16px;margin-top:40px">
+      <details style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px">
+        <summary style="font-weight:700;color:#1e293b;cursor:pointer;font-size:.95rem">無料で使えますか？登録は必要ですか？</summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8">完全無料・登録不要でご利用いただけます。メールアドレスや個人情報の入力は一切不要です。</p>
+      </details>
+      <details style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px">
+        <summary style="font-weight:700;color:#1e293b;cursor:pointer;font-size:.95rem">生成した件名は商用利用できますか？</summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8">はい、生成された件名は自由にご利用いただけます。ビジネスメール・ニュースレター・メルマガ等にお使いください。</p>
+      </details>
+      <details style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px">
+        <summary style="font-weight:700;color:#1e293b;cursor:pointer;font-size:.95rem">開封率スコアはどのように算出されますか？</summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8">業界別の過去データと、件名の長さ・数字の有無・疑問形・緊急性ワードなど複数の要素を分析して0〜100点のスコアを算出しています。あくまで参考値です。</p>
+      </details>
+      <details style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:20px 22px">
+        <summary style="font-weight:700;color:#1e293b;cursor:pointer;font-size:.95rem">スマートフォンでも使えますか？</summary>
+        <p style="margin-top:12px;font-size:.88rem;color:#475569;line-height:1.8">はい、スマートフォン・タブレット・PCすべてに対応しています。アプリのインストールも不要です。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-stars">⭐⭐⭐⭐⭐</div>
+  <h2 class="cta-title">件名作成に迷ったら、<br>今すぐ試してみましょう</h2>
+  <p class="cta-sub">登録不要・完全無料。5秒で開封率の高い件名を生成。</p>
+  <a href="/email-subject-generator/" class="cta-btn">✉️ 無料で今すぐ生成</a>
+  <p class="cta-note">📧 登録不要・クレジットカード不要・完全無料</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">📧 AppADayCreator</div>
+  <div class="footer-links">
+    <a href="/email-subject-generator/">ツールを使う</a>
+    <a href="/privacy-policy.html">プライバシーポリシー</a>
+    <a href="/terms.html">利用規約</a>
+    <a href="/contact.html">お問い合わせ</a>
+  </div>
+  <div class="footer-copy">© 2026 AppADayCreator. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
