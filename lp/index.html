@@ -44,7 +44,7 @@ a{text-decoration:none}
 .btn-primary:hover{background:#d97706;transform:translateY(-2px);box-shadow:0 8px 20px rgba(245,158,11,.4)}
 .btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);padding:13px 24px;border-radius:10px;font-size:1rem;font-weight:600;transition:all .2s}
 .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
-.hero-card{background:rgba(255,255,255,.97);border-radius:16px;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.hero-card{background:#fff;border-radius:20px;padding:28px;box-shadow:0 28px 80px rgba(0,0,0,.45),0 0 0 1px rgba(255,255,255,.3)}
 .hero-card-title{font-size:.8rem;font-weight:700;color:#94a3b8;margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
 .hero-subject-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:#f8fafc;border:1px solid #e2e8f0}
 .hero-subject-item:last-child{margin-bottom:0}
@@ -73,13 +73,19 @@ a{text-decoration:none}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .feature-card{background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:28px 24px;transition:all .25s}
 .feature-card:hover{border-color:#3b82f6;box-shadow:0 8px 32px rgba(59,130,246,.12);transform:translateY(-4px)}
-.feature-icon{width:56px;height:56px;background:#eff6ff;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.feature-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .feature-icon img{width:32px;height:32px;object-fit:contain}
+.fi-blue{background:#dbeafe}
+.fi-teal{background:#ccfbf1}
+.fi-amber{background:#fef3c7}
+.fi-green{background:#dcfce7}
+.fi-purple{background:#f3e8ff}
+.fi-orange{background:#ffedd5}
 .feature-title{font-size:1.05rem;font-weight:800;color:#1e293b;margin-bottom:8px}
 .feature-desc{font-size:.875rem;color:#64748b;line-height:1.75}
 
 /* ── PROBLEMS ── */
-.problems{background:#eff6ff;padding:72px 20px}
+.problems{background:#fff;padding:72px 20px}
 .problems-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;margin:0 auto}
 .problem-list{display:flex;flex-direction:column;gap:14px}
 .problem-item{display:flex;align-items:flex-start;gap:12px;background:#fff;border-radius:12px;padding:16px 18px;border-left:4px solid #f59e0b;box-shadow:0 2px 8px rgba(0,0,0,.06)}
@@ -90,9 +96,10 @@ a{text-decoration:none}
 
 /* ── SOLUTIONS ── */
 .solutions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.solution-card{background:#3b82f6;color:#fff;border-radius:16px;padding:28px 22px;text-align:center}
-.solution-card:nth-child(2){background:#1d4ed8}
-.solution-card:nth-child(3){background:#1e40af}
+.solution-card{color:#fff;border-radius:16px;padding:28px 22px;text-align:center}
+.solution-card:nth-child(1){background:linear-gradient(135deg,#0ea5e9,#0284c7)}
+.solution-card:nth-child(2){background:linear-gradient(135deg,#6366f1,#4f46e5)}
+.solution-card:nth-child(3){background:linear-gradient(135deg,#0d9488,#0f766e)}
 .solution-icon{width:56px;height:56px;background:rgba(255,255,255,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
 .solution-icon img{width:32px;height:32px;object-fit:contain;filter:brightness(0) invert(1)}
 .solution-title{font-size:1.05rem;font-weight:800;margin-bottom:8px}
@@ -155,7 +162,7 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
 @media(max-width:900px){
   .hero-content{grid-template-columns:1fr;gap:32px}
   .hero-card{display:none}
-  .features-grid,.solutions-grid{grid-template-columns:1fr}
+  .features-grid,.solutions-grid{grid-template-columns:1fr 1fr}
   .problems-grid{grid-template-columns:1fr}
   .problems-photo{order:-1}
   .scenes-grid{grid-template-columns:repeat(2,1fr)}
@@ -163,6 +170,9 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
   .template-grid{grid-template-columns:1fr}
   .hero h1{font-size:1.8rem}
   .nav{display:none}
+}
+@media(max-width:640px){
+  .features-grid,.solutions-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .stats-grid{grid-template-columns:1fr 1fr}
@@ -242,32 +252,53 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
 </div>
 
 <!-- FEATURES -->
-<section class="section" id="features">
+<section class="section" id="features" style="background:#f8fafc">
   <div class="section-inner">
     <div class="section-label">Features</div>
     <h2 class="section-title">AIが提供する3つの強み</h2>
     <p class="section-sub">業界・目的を入力するだけで、プロ品質のメール件名が即座に生成されます。</p>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon fi-blue">
           <img src="../assets/icons/split/02-01.png" alt="AI分析">
         </div>
         <div class="feature-title">AI深層分析で件名を最適化</div>
         <p class="feature-desc">受信者の属性・トーン・メールの意図をAIが分析。業界固有のキーワードを織り込んだ件名を複数パターン生成します。</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon fi-teal">
           <img src="../assets/icons/split/01-08.png" alt="開封率スコア">
         </div>
         <div class="feature-title">開封率予測スコアを表示</div>
         <p class="feature-desc">生成した件名ごとに0〜100の開封率予測スコアを表示。数字・疑問形・緊急性など、開封率を上げる要素を自動評価します。</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">
+        <div class="feature-icon fi-amber">
           <img src="../assets/icons/split/02-04.png" alt="A/Bテスト">
         </div>
         <div class="feature-title">A/Bテスト比較機能</div>
         <p class="feature-desc">複数件名のスコアを並べて比較。どの件名が最も効果的かを一目で判断でき、メール配信前の最終チェックに活用できます。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-green">
+          <img src="../assets/icons/split/02-05.png" alt="テンプレート">
+        </div>
+        <div class="feature-title">業界別テンプレート自動補完</div>
+        <p class="feature-desc">20業界×15目的のマトリクスから最適なテンプレートを自動提案。ゼロから考える手間なくプロ品質の件名が完成します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-purple">
+          <img src="../assets/icons/split/01-06.png" alt="パーソナライズ">
+        </div>
+        <div class="feature-title">受信者属性でパーソナライズ</div>
+        <p class="feature-desc">年代・職種・過去購買履歴などの属性に応じた件名調整が可能。セグメント別に最適化された件名で開封率を最大化します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon fi-orange">
+          <img src="../assets/icons/split/03-01.png" alt="ワンクリックコピー">
+        </div>
+        <div class="feature-title">ワンクリックコピー&即使える</div>
+        <p class="feature-desc">高スコアの件名をボタン一つでコピー。メールソフト・配信ツール・Excelにペーストするだけで即戦力の件名が完成します。</p>
       </div>
     </div>
   </div>
@@ -504,36 +535,39 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
   <div class="section-inner">
     <div class="section-label">How to Use</div>
     <h2 class="section-title">使い方はとても簡単！<br>4ステップで完了</h2>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px">
+    <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:8px;align-items:start;margin-top:48px">
       <div style="text-align:center">
-        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+        <div style="width:64px;height:64px;background:#dbeafe;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
           <img src="../assets/icons/split/03-06.png" alt="業界選択" style="width:32px;height:32px;object-fit:contain">
         </div>
-        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 1</div>
+        <div style="font-size:.72rem;font-weight:900;color:#fff;background:#3b82f6;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 1</div>
         <div style="font-weight:800;color:#1e293b;margin-bottom:6px">業界を選ぶ</div>
         <div style="font-size:.82rem;color:#64748b;line-height:1.7">20業界から自分のビジネスに近いカテゴリを選択</div>
       </div>
+      <div style="display:flex;align-items:flex-start;padding-top:28px;font-size:1.6rem;color:#3b82f6;font-weight:900">→</div>
       <div style="text-align:center">
-        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+        <div style="width:64px;height:64px;background:#ccfbf1;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #0d9488">
           <img src="../assets/icons/split/01-05.png" alt="目的選択" style="width:32px;height:32px;object-fit:contain">
         </div>
-        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 2</div>
+        <div style="font-size:.72rem;font-weight:900;color:#fff;background:#0d9488;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 2</div>
         <div style="font-weight:800;color:#1e293b;margin-bottom:6px">目的を選ぶ</div>
         <div style="font-size:.82rem;color:#64748b;line-height:1.7">商品案内・フォロー・謝罪など15種類の目的から選択</div>
       </div>
+      <div style="display:flex;align-items:flex-start;padding-top:28px;font-size:1.6rem;color:#6366f1;font-weight:900">→</div>
       <div style="text-align:center">
-        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+        <div style="width:64px;height:64px;background:#f3e8ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #6366f1">
           <img src="../assets/icons/split/01-04.png" alt="生成" style="width:32px;height:32px;object-fit:contain">
         </div>
-        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 3</div>
+        <div style="font-size:.72rem;font-weight:900;color:#fff;background:#6366f1;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 3</div>
         <div style="font-weight:800;color:#1e293b;margin-bottom:6px">AIが件名を生成</div>
         <div style="font-size:.82rem;color:#64748b;line-height:1.7">5秒以内に複数の件名候補とスコアを自動生成</div>
       </div>
+      <div style="display:flex;align-items:flex-start;padding-top:28px;font-size:1.6rem;color:#f59e0b;font-weight:900">→</div>
       <div style="text-align:center">
-        <div style="width:64px;height:64px;background:#eff6ff;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #3b82f6">
+        <div style="width:64px;height:64px;background:#fef3c7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;border:3px solid #f59e0b">
           <img src="../assets/icons/split/03-01.png" alt="活用" style="width:32px;height:32px;object-fit:contain">
         </div>
-        <div style="font-size:.72rem;font-weight:900;color:#3b82f6;background:#eff6ff;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 4</div>
+        <div style="font-size:.72rem;font-weight:900;color:#fff;background:#f59e0b;display:inline-block;padding:2px 10px;border-radius:20px;margin-bottom:8px">STEP 4</div>
         <div style="font-weight:800;color:#1e293b;margin-bottom:6px">コピーして活用</div>
         <div style="font-size:.82rem;color:#64748b;line-height:1.7">高スコアの件名をワンクリックでコピー。即使える</div>
       </div>
