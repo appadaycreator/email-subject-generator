@@ -31,9 +31,10 @@ a{text-decoration:none}
 .header-cta:hover{background:#2563eb}
 
 /* ── HERO ── */
-.hero{position:relative;min-height:600px;display:flex;align-items:center;overflow:hidden}
+.hero{position:relative;min-height:620px;display:flex;align-items:center;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background-image:url('../assets/photos/photo_01.jpg');background-size:cover;background-position:center top}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(15,30,80,.82) 45%,rgba(15,30,80,.45) 100%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,20,80,.94) 0%,rgba(15,30,90,.90) 40%,rgba(10,20,70,.45) 70%,rgba(10,20,60,.18) 100%)}
+.hero-overlay2{position:absolute;inset:0;background:linear-gradient(135deg,#1d3a8a 0%,#1e40af 30%,transparent 65%)}
 .hero-content{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:80px 24px;display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(251,191,36,.2);border:1px solid #f59e0b;color:#fbbf24;padding:4px 14px;border-radius:20px;font-size:.78rem;font-weight:700;margin-bottom:16px}
 .hero h1{font-size:2.4rem;font-weight:900;color:#fff;line-height:1.25;margin-bottom:16px}
@@ -75,12 +76,13 @@ a{text-decoration:none}
 .feature-card:hover{border-color:#3b82f6;box-shadow:0 8px 32px rgba(59,130,246,.12);transform:translateY(-4px)}
 .feature-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
 .feature-icon img{width:32px;height:32px;object-fit:contain}
-.fi-blue{background:#dbeafe}
-.fi-teal{background:#ccfbf1}
-.fi-amber{background:#fef3c7}
-.fi-green{background:#dcfce7}
-.fi-purple{background:#f3e8ff}
-.fi-orange{background:#ffedd5}
+.fi-blue{background:linear-gradient(135deg,#3b82f6,#1d4ed8)}
+.fi-teal{background:linear-gradient(135deg,#0d9488,#0891b2)}
+.fi-amber{background:linear-gradient(135deg,#f59e0b,#f97316)}
+.fi-green{background:linear-gradient(135deg,#10b981,#059669)}
+.fi-purple{background:linear-gradient(135deg,#8b5cf6,#6366f1)}
+.fi-orange{background:linear-gradient(135deg,#f97316,#ef4444)}
+.feature-icon img{filter:brightness(0) invert(1)}
 .feature-title{font-size:1.05rem;font-weight:800;color:#1e293b;margin-bottom:8px}
 .feature-desc{font-size:.875rem;color:#64748b;line-height:1.75}
 
@@ -131,13 +133,14 @@ a{text-decoration:none}
 
 /* ── TEMPLATES ── */
 .templates{background:#f8fafc;padding:72px 20px}
-.template-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.template-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
-.template-industry{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.template-industry img{width:24px;height:24px;object-fit:contain}
-.template-industry-name{font-size:.8rem;font-weight:700;color:#3b82f6;background:#eff6ff;padding:3px 10px;border-radius:20px}
-.template-subject{font-size:.88rem;color:#1e293b;font-weight:600;margin-bottom:4px}
-.template-score{font-size:.75rem;color:#16a34a;font-weight:700}
+.template-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.template-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px;transition:all .2s}
+.template-card:hover{border-color:#3b82f6;box-shadow:0 4px 16px rgba(59,130,246,.1);transform:translateY(-2px)}
+.template-industry{display:flex;align-items:center;gap:6px;margin-bottom:8px}
+.template-industry img{width:20px;height:20px;object-fit:contain}
+.template-industry-name{font-size:.75rem;font-weight:700;color:#3b82f6;background:#eff6ff;padding:2px 8px;border-radius:20px}
+.template-subject{font-size:.82rem;color:#1e293b;font-weight:600;margin-bottom:4px;line-height:1.5}
+.template-score{font-size:.72rem;color:#16a34a;font-weight:700}
 
 /* ── CTA ── */
 .cta-section{background:linear-gradient(135deg,#1e3a5f,#3b82f6);padding:80px 20px;text-align:center;position:relative;overflow:hidden}
@@ -167,12 +170,13 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
   .problems-photo{order:-1}
   .scenes-grid{grid-template-columns:repeat(2,1fr)}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .template-grid{grid-template-columns:1fr}
+  .template-grid{grid-template-columns:repeat(2,1fr)}
   .hero h1{font-size:1.8rem}
   .nav{display:none}
 }
 @media(max-width:640px){
   .features-grid,.solutions-grid{grid-template-columns:1fr}
+  .template-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
   .stats-grid{grid-template-columns:1fr 1fr}
@@ -204,6 +208,7 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
+  <div class="hero-overlay2"></div>
   <div class="hero-content">
     <div>
       <div class="hero-badge"><span>✨</span> AI搭載・完全無料・登録不要</div>
@@ -215,7 +220,19 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
       </div>
     </div>
     <div class="hero-card">
-      <div class="hero-card-title">AIが生成したメール件名（例）</div>
+      <div class="hero-card-title">📧 メール件名AI生成ツール</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">
+        <div style="background:#f1f5f9;border-radius:8px;padding:8px 10px">
+          <div style="font-size:.65rem;color:#94a3b8;font-weight:700;margin-bottom:3px">業界</div>
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b">EC・販売</div>
+        </div>
+        <div style="background:#f1f5f9;border-radius:8px;padding:8px 10px">
+          <div style="font-size:.65rem;color:#94a3b8;font-weight:700;margin-bottom:3px">目的</div>
+          <div style="font-size:.78rem;font-weight:700;color:#1e293b">商品案内</div>
+        </div>
+      </div>
+      <div style="background:#3b82f6;color:#fff;text-align:center;border-radius:8px;padding:9px;font-size:.8rem;font-weight:800;margin-bottom:12px;letter-spacing:.02em">✨ 件名を生成する</div>
+      <div style="font-size:.68rem;font-weight:700;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px">生成結果</div>
       <div class="hero-subject-item">
         <span class="hero-subject-text">【限定】本日のみ！EC会員様への特別オファー</span>
         <span class="score-badge score-high">92点</span>
@@ -227,10 +244,6 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
       <div class="hero-subject-item">
         <span class="hero-subject-text">お礼とご報告：先日のご注文について</span>
         <span class="score-badge score-mid">74点</span>
-      </div>
-      <div class="hero-subject-item">
-        <span class="hero-subject-text">今週の学習進捗レポートをお届けします</span>
-        <span class="score-badge score-mid">71点</span>
       </div>
       <div class="hero-score-box">
         <div class="hero-score-num">87</div>
@@ -522,6 +535,22 @@ footer{background:#1e293b;padding:40px 20px 20px;text-align:center}
         </div>
         <div class="template-subject">書類選考結果のご連絡 ─ 株式会社〇〇</div>
         <div class="template-score">📊 開封率スコア: 79点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/01-05.png" alt="金融">
+          <span class="template-industry-name">金融・保険</span>
+        </div>
+        <div class="template-subject">〇〇様の保険更新日が近づいています（△月△日）</div>
+        <div class="template-score">📊 開封率スコア: 81点</div>
+      </div>
+      <div class="template-card">
+        <div class="template-industry">
+          <img src="../assets/icons/split/04-03.png" alt="旅行">
+          <span class="template-industry-name">旅行・観光</span>
+        </div>
+        <div class="template-subject">【ご予約確認】〇〇旅行のご日程をお知らせします</div>
+        <div class="template-score">📊 開封率スコア: 77点</div>
       </div>
     </div>
     <div style="text-align:center;margin-top:32px">
