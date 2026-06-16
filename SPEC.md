@@ -3,8 +3,8 @@
 ## 概要
 
 **サービス名**: Email Subject Generator
-**バージョン**: 1.0.0
-**更新日**: 2026-05-27
+**バージョン**: 1.0.1
+**更新日**: 2026-06-04
 **URL**: https://appadaycreator.com/email-subject-generator/
 
 業界・目的から効果的なメール件名パターンとコピーライティングのヒントを提案。登録不要・完全無料でご利用いただけます。
@@ -57,6 +57,25 @@
 - [ハッシュタグ戦略診断](https://appadaycreator.com/hashtag-strategy-advisor/)
 - [SNS投稿最適時間診断](https://appadaycreator.com/sns-post-timing-advisor/)
 - [ブログ・SNS収益化適性診断](https://appadaycreator.com/blog-income-advisor/)
+
+## 変更履歴
+
+### v1.1.1 (2026-06-14)
+- **実装**: M10 印刷・結果エクスポート機能
+  - 結果テキストのクリップボードコピー機能
+  - CSVダウンロード機能
+  - window.print()による印刷機能
+  - 印刷用CSS強化（@media print）
+
+### v1.1.0 (2026-06-14)
+- **実装**: M4 グラフ・スコア・ゲージで結果を可視化（Chart.js）
+- **実装**: M5 結果に連動したアフィリエイト商品推薦
+- **実装**: M7 複数パターン比較・シミュレーション機能
+
+### v1.0.1 (2026-06-04)
+- **修正**: PWA manifest.json の theme_color を統一
+  - manifest.json の `theme_color` を `#7c3aed` から `#6366F1` に変更
+  - HTML meta タグの theme-color と一致させ、ブラウザ UI 表示を統一
 
 ## テスト
 
